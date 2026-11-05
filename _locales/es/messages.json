@@ -1,0 +1,195 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Pruebas de API profesionales en el panel lateral de tu navegador. Prueba APIs REST, GraphQL y WebSocket. Sin registro.",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo",
+    "description": "Tooltip for the extension toolbar icon"
+  },
+  "buttonSend": {
+    "message": "Enviar"
+  },
+  "buttonSave": {
+    "message": "Guardar"
+  },
+  "buttonCancel": {
+    "message": "Cancelar"
+  },
+  "buttonDelete": {
+    "message": "Eliminar"
+  },
+  "buttonCopy": {
+    "message": "Copiar"
+  },
+  "buttonClear": {
+    "message": "Limpiar"
+  },
+  "buttonImport": {
+    "message": "Importar"
+  },
+  "buttonExport": {
+    "message": "Exportar"
+  },
+  "buttonUpgrade": {
+    "message": "Actualizar a Pro"
+  },
+  "buttonTryAgain": {
+    "message": "Intentar de nuevo"
+  },
+  "tabHeaders": {
+    "message": "Encabezados"
+  },
+  "tabBody": {
+    "message": "Cuerpo"
+  },
+  "tabParams": {
+    "message": "Parámetros"
+  },
+  "tabAuth": {
+    "message": "Auth"
+  },
+  "tabResponse": {
+    "message": "Respuesta"
+  },
+  "tabHistory": {
+    "message": "Historial"
+  },
+  "tabSaved": {
+    "message": "Guardados"
+  },
+  "tabSettings": {
+    "message": "Ajustes"
+  },
+  "labelUrl": {
+    "message": "URL"
+  },
+  "labelMethod": {
+    "message": "Método"
+  },
+  "labelStatus": {
+    "message": "Estado"
+  },
+  "labelTime": {
+    "message": "Tiempo"
+  },
+  "labelSize": {
+    "message": "Tamaño"
+  },
+  "labelContentType": {
+    "message": "Content-Type"
+  },
+  "placeholderUrl": {
+    "message": "Introduce la URL de la solicitud"
+  },
+  "placeholderSearch": {
+    "message": "Buscar solicitudes..."
+  },
+  "placeholderHeaderKey": {
+    "message": "Nombre del encabezado"
+  },
+  "placeholderHeaderValue": {
+    "message": "Valor"
+  },
+  "statusSending": {
+    "message": "Enviando solicitud..."
+  },
+  "statusSuccess": {
+    "message": "Solicitud exitosa"
+  },
+  "statusError": {
+    "message": "Solicitud fallida"
+  },
+  "errorNetwork": {
+    "message": "Error de red — comprueba tu conexión"
+  },
+  "errorTimeout": {
+    "message": "Tiempo de espera agotado"
+  },
+  "errorInvalidUrl": {
+    "message": "Por favor introduce una URL válida"
+  },
+  "errorSomethingWrong": {
+    "message": "Algo salió mal"
+  },
+  "emptyHistory": {
+    "message": "Sin historial de solicitudes"
+  },
+  "emptySaved": {
+    "message": "Sin solicitudes guardadas"
+  },
+  "proFeatureLocked": {
+    "message": "Esta función requiere Pro"
+  },
+  "proSavedLimit": {
+    "message": "Límite gratuito alcanzado ($COUNT$/5). Actualiza a Pro para solicitudes ilimitadas.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "proPrice": {
+    "message": "$4.99/mes o $39.99/año"
+  },
+  "settingsTheme": {
+    "message": "Tema"
+  },
+  "settingsThemeDark": {
+    "message": "Oscuro"
+  },
+  "settingsThemeLight": {
+    "message": "Claro"
+  },
+  "settingsTimeout": {
+    "message": "Tiempo de espera"
+  },
+  "settingsFollowRedirects": {
+    "message": "Seguir redirecciones"
+  },
+  "contextMenuOpen": {
+    "message": "Abrir API Testing PRO"
+  },
+  "onboardingWelcome": {
+    "message": "Bienvenido a API Testing PRO"
+  },
+  "onboardingSubtitle": {
+    "message": "Pruebas de API profesionales, directamente en tu navegador"
+  },
+  "onboardingGetStarted": {
+    "message": "Comenzar"
+  },
+  "responseTime": {
+    "message": "$TIME$ ms",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "responseSize": {
+    "message": "$SIZE$ KB",
+    "placeholders": {
+      "size": {
+        "content": "$1"
+      }
+    }
+  },
+  "referralTitle": {
+    "message": "Invita amigos, obtén Pro gratis"
+  },
+  "referralSubtitle": {
+    "message": "Gana 7 días de Pro por cada amigo que se una"
+  },
+  "referralCopyLink": {
+    "message": "Copiar enlace de referido"
+  },
+  "referralCopied": {
+    "message": "¡Enlace copiado!"
+  }
+}

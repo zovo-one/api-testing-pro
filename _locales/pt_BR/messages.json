@@ -1,0 +1,194 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Testes de API profissionais no painel lateral do seu navegador. Teste APIs REST, GraphQL e WebSocket. Sem cadastro.",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo"
+  },
+  "buttonSend": {
+    "message": "Enviar"
+  },
+  "buttonSave": {
+    "message": "Salvar"
+  },
+  "buttonCancel": {
+    "message": "Cancelar"
+  },
+  "buttonDelete": {
+    "message": "Excluir"
+  },
+  "buttonCopy": {
+    "message": "Copiar"
+  },
+  "buttonClear": {
+    "message": "Limpar"
+  },
+  "buttonImport": {
+    "message": "Importar"
+  },
+  "buttonExport": {
+    "message": "Exportar"
+  },
+  "buttonUpgrade": {
+    "message": "Atualizar para Pro"
+  },
+  "buttonTryAgain": {
+    "message": "Tentar novamente"
+  },
+  "tabHeaders": {
+    "message": "Cabeçalhos"
+  },
+  "tabBody": {
+    "message": "Corpo"
+  },
+  "tabParams": {
+    "message": "Parâmetros"
+  },
+  "tabAuth": {
+    "message": "Auth"
+  },
+  "tabResponse": {
+    "message": "Resposta"
+  },
+  "tabHistory": {
+    "message": "Histórico"
+  },
+  "tabSaved": {
+    "message": "Salvos"
+  },
+  "tabSettings": {
+    "message": "Configurações"
+  },
+  "labelUrl": {
+    "message": "URL"
+  },
+  "labelMethod": {
+    "message": "Método"
+  },
+  "labelStatus": {
+    "message": "Status"
+  },
+  "labelTime": {
+    "message": "Tempo"
+  },
+  "labelSize": {
+    "message": "Tamanho"
+  },
+  "labelContentType": {
+    "message": "Content-Type"
+  },
+  "placeholderUrl": {
+    "message": "Digite a URL da requisição"
+  },
+  "placeholderSearch": {
+    "message": "Pesquisar requisições..."
+  },
+  "placeholderHeaderKey": {
+    "message": "Nome do cabeçalho"
+  },
+  "placeholderHeaderValue": {
+    "message": "Valor"
+  },
+  "statusSending": {
+    "message": "Enviando requisição..."
+  },
+  "statusSuccess": {
+    "message": "Requisição bem-sucedida"
+  },
+  "statusError": {
+    "message": "Requisição falhou"
+  },
+  "errorNetwork": {
+    "message": "Erro de rede — verifique sua conexão"
+  },
+  "errorTimeout": {
+    "message": "Tempo limite da requisição excedido"
+  },
+  "errorInvalidUrl": {
+    "message": "Por favor, insira uma URL válida"
+  },
+  "errorSomethingWrong": {
+    "message": "Algo deu errado"
+  },
+  "emptyHistory": {
+    "message": "Nenhum histórico de requisições"
+  },
+  "emptySaved": {
+    "message": "Nenhuma requisição salva"
+  },
+  "proFeatureLocked": {
+    "message": "Este recurso requer Pro"
+  },
+  "proSavedLimit": {
+    "message": "Limite gratuito atingido ($COUNT$/5). Atualize para Pro para requisições ilimitadas.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "proPrice": {
+    "message": "$4,99/mês ou $39,99/ano"
+  },
+  "settingsTheme": {
+    "message": "Tema"
+  },
+  "settingsThemeDark": {
+    "message": "Escuro"
+  },
+  "settingsThemeLight": {
+    "message": "Claro"
+  },
+  "settingsTimeout": {
+    "message": "Tempo limite"
+  },
+  "settingsFollowRedirects": {
+    "message": "Seguir redirecionamentos"
+  },
+  "contextMenuOpen": {
+    "message": "Abrir API Testing PRO"
+  },
+  "onboardingWelcome": {
+    "message": "Bem-vindo ao API Testing PRO"
+  },
+  "onboardingSubtitle": {
+    "message": "Testes profissionais de API, direto no seu navegador"
+  },
+  "onboardingGetStarted": {
+    "message": "Começar"
+  },
+  "responseTime": {
+    "message": "$TIME$ ms",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "responseSize": {
+    "message": "$SIZE$ KB",
+    "placeholders": {
+      "size": {
+        "content": "$1"
+      }
+    }
+  },
+  "referralTitle": {
+    "message": "Convide amigos, ganhe Pro grátis"
+  },
+  "referralSubtitle": {
+    "message": "Ganhe 7 dias de Pro para cada amigo que entrar"
+  },
+  "referralCopyLink": {
+    "message": "Copiar link de indicação"
+  },
+  "referralCopied": {
+    "message": "Link copiado!"
+  }
+}

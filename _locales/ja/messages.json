@@ -1,0 +1,194 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "ブラウザのサイドパネルでプロフェッショナルなAPIテスト。REST、GraphQL、WebSocket APIをテスト。登録不要。",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo"
+  },
+  "buttonSend": {
+    "message": "送信"
+  },
+  "buttonSave": {
+    "message": "保存"
+  },
+  "buttonCancel": {
+    "message": "キャンセル"
+  },
+  "buttonDelete": {
+    "message": "削除"
+  },
+  "buttonCopy": {
+    "message": "コピー"
+  },
+  "buttonClear": {
+    "message": "クリア"
+  },
+  "buttonImport": {
+    "message": "インポート"
+  },
+  "buttonExport": {
+    "message": "エクスポート"
+  },
+  "buttonUpgrade": {
+    "message": "Proにアップグレード"
+  },
+  "buttonTryAgain": {
+    "message": "もう一度試す"
+  },
+  "tabHeaders": {
+    "message": "ヘッダー"
+  },
+  "tabBody": {
+    "message": "ボディ"
+  },
+  "tabParams": {
+    "message": "パラメータ"
+  },
+  "tabAuth": {
+    "message": "認証"
+  },
+  "tabResponse": {
+    "message": "レスポンス"
+  },
+  "tabHistory": {
+    "message": "履歴"
+  },
+  "tabSaved": {
+    "message": "保存済み"
+  },
+  "tabSettings": {
+    "message": "設定"
+  },
+  "labelUrl": {
+    "message": "URL"
+  },
+  "labelMethod": {
+    "message": "メソッド"
+  },
+  "labelStatus": {
+    "message": "ステータス"
+  },
+  "labelTime": {
+    "message": "時間"
+  },
+  "labelSize": {
+    "message": "サイズ"
+  },
+  "labelContentType": {
+    "message": "Content-Type"
+  },
+  "placeholderUrl": {
+    "message": "リクエストURLを入力"
+  },
+  "placeholderSearch": {
+    "message": "リクエストを検索..."
+  },
+  "placeholderHeaderKey": {
+    "message": "ヘッダー名"
+  },
+  "placeholderHeaderValue": {
+    "message": "値"
+  },
+  "statusSending": {
+    "message": "リクエスト送信中..."
+  },
+  "statusSuccess": {
+    "message": "リクエスト成功"
+  },
+  "statusError": {
+    "message": "リクエスト失敗"
+  },
+  "errorNetwork": {
+    "message": "ネットワークエラー — 接続を確認してください"
+  },
+  "errorTimeout": {
+    "message": "リクエストがタイムアウトしました"
+  },
+  "errorInvalidUrl": {
+    "message": "有効なURLを入力してください"
+  },
+  "errorSomethingWrong": {
+    "message": "問題が発生しました"
+  },
+  "emptyHistory": {
+    "message": "リクエスト履歴はまだありません"
+  },
+  "emptySaved": {
+    "message": "保存されたリクエストはありません"
+  },
+  "proFeatureLocked": {
+    "message": "この機能にはProが必要です"
+  },
+  "proSavedLimit": {
+    "message": "無料プランの上限に達しました（$COUNT$/5）。Proにアップグレードして無制限に。",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "proPrice": {
+    "message": "月額$4.99 または 年額$39.99"
+  },
+  "settingsTheme": {
+    "message": "テーマ"
+  },
+  "settingsThemeDark": {
+    "message": "ダーク"
+  },
+  "settingsThemeLight": {
+    "message": "ライト"
+  },
+  "settingsTimeout": {
+    "message": "タイムアウト"
+  },
+  "settingsFollowRedirects": {
+    "message": "リダイレクトに従う"
+  },
+  "contextMenuOpen": {
+    "message": "API Testing PROを開く"
+  },
+  "onboardingWelcome": {
+    "message": "API Testing PROへようこそ"
+  },
+  "onboardingSubtitle": {
+    "message": "ブラウザで直接プロフェッショナルなAPIテスト"
+  },
+  "onboardingGetStarted": {
+    "message": "始める"
+  },
+  "responseTime": {
+    "message": "$TIME$ ms",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "responseSize": {
+    "message": "$SIZE$ KB",
+    "placeholders": {
+      "size": {
+        "content": "$1"
+      }
+    }
+  },
+  "referralTitle": {
+    "message": "友達を招待してProを無料で"
+  },
+  "referralSubtitle": {
+    "message": "友達が参加するごとに7日間のProを獲得"
+  },
+  "referralCopyLink": {
+    "message": "紹介リンクをコピー"
+  },
+  "referralCopied": {
+    "message": "リンクをコピーしました！"
+  }
+}

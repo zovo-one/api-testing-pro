@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to API Testing PRO</title>
+    <style>
+        :root {
+            --zovo-primary: #7c3aed;
+            --zovo-primary-hover: #6d28d9;
+            --zovo-bg-primary: #0f0f0f;
+            --zovo-bg-secondary: #18181b;
+            --zovo-bg-elevated: #27272a;
+            --zovo-text-primary: #fafafa;
+            --zovo-text-secondary: #a1a1aa;
+            --zovo-text-muted: #71717a;
+            --zovo-success: #10b981;
+            --zovo-border: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--zovo-bg-primary);
+            color: var(--zovo-text-primary);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--zovo-primary), var(--zovo-primary-hover));
+            padding: 48px 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .brand-info {
+            text-align: left;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .brand-tagline {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 32px 20px 48px;
+        }
+
+        .card {
+            background: var(--zovo-bg-secondary);
+            border-radius: 16px;
+            border: 1px solid var(--zovo-border);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--zovo-text-primary);
+            margin-bottom: 16px;
+        }
+
+        /* Sample APIs */
+        .samples {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sample {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--zovo-bg-elevated);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .sample:hover {
+            border-color: var(--zovo-primary);
+            background: rgba(124, 58, 237, 0.1);
+        }
+
+        .method {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .method.get {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .method.post {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+
+        .sample-url {
+            font-size: 13px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: var(--zovo-text-secondary);
+            flex: 1;
+        }
+
+        .sample-action {
+            font-size: 12px;
+            color: var(--zovo-primary);
+            font-weight: 500;
+        }
+
+        /* Pin Steps */
+        .pin-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .pin-step {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            width: 28px;
+            height: 28px;
+            background: var(--zovo-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .step-content p {
+            color: var(--zovo-text-muted);
+            font-size: 13px;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .feature {
+            padding: 16px;
+            background: var(--zovo-bg-elevated);
+            border-radius: 10px;
+        }
+
+        .feature h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .feature p {
+            color: var(--zovo-text-muted);
+            font-size: 12px;
+        }
+
+        .pro-badge {
+            font-size: 10px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            padding: 24px 0;
+        }
+
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--zovo-primary), var(--zovo-primary-hover));
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--zovo-bg-elevated);
+            color: var(--zovo-text-primary);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 10px;
+            border: 1px solid var(--zovo-border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cta-secondary:hover {
+            border-color: var(--zovo-primary);
+            background: rgba(124, 58, 237, 0.1);
+        }
+
+        .cta-hint {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--zovo-text-muted);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--zovo-border);
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--zovo-text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--zovo-text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--zovo-primary);
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: var(--zovo-text-muted);
+        }
+
+        /* Tutorial Page */
+        .tutorial-progress {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+
+        .progress-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--zovo-bg-elevated);
+            border: 2px solid var(--zovo-border);
+            transition: all 0.3s;
+        }
+
+        .progress-dot.active {
+            background: var(--zovo-primary);
+            border-color: var(--zovo-primary);
+            transform: scale(1.2);
+        }
+
+        .progress-dot.done {
+            background: var(--zovo-success);
+            border-color: var(--zovo-success);
+        }
+
+        .progress-line {
+            width: 32px;
+            height: 2px;
+            background: var(--zovo-border);
+            transition: background 0.3s;
+        }
+
+        .progress-line.done {
+            background: var(--zovo-success);
+        }
+
+        .tutorial-step {
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tutorial-step-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--zovo-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .tutorial-step-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .tutorial-step-desc {
+            color: var(--zovo-text-secondary);
+            font-size: 14px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .visual-demo {
+            background: var(--zovo-bg-elevated);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid var(--zovo-border);
+        }
+
+        .demo-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--zovo-bg-primary);
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin-bottom: 12px;
+        }
+
+        .demo-method {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .demo-method.post {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+
+        .demo-url {
+            flex: 1;
+            font-size: 13px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: var(--zovo-text-secondary);
+        }
+
+        .demo-send {
+            background: var(--zovo-primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .demo-response {
+            background: var(--zovo-bg-primary);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 12px;
+            color: var(--zovo-text-secondary);
+            line-height: 1.6;
+            white-space: pre;
+            overflow-x: auto;
+        }
+
+        .demo-response .key {
+            color: #10b981;
+        }
+
+        .demo-response .val {
+            color: #f59e0b;
+        }
+
+        .demo-response .num {
+            color: #818cf8;
+        }
+
+        .demo-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .demo-status-badge {
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        .demo-status-meta {
+            color: var(--zovo-text-muted);
+        }
+
+        .tutorial-tip {
+            display: flex;
+            gap: 12px;
+            padding: 14px 16px;
+            background: rgba(124, 58, 237, 0.08);
+            border-radius: 10px;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            margin-bottom: 24px;
+        }
+
+        .tutorial-tip-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .tutorial-tip-text {
+            font-size: 13px;
+            color: var(--zovo-text-secondary);
+            line-height: 1.5;
+        }
+
+        .tutorial-tip-text strong {
+            color: var(--zovo-text-primary);
+        }
+
+        .tutorial-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .demo-tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--zovo-border);
+        }
+
+        .demo-tab {
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--zovo-text-muted);
+            border-bottom: 2px solid transparent;
+        }
+
+        .demo-tab.active {
+            color: var(--zovo-primary);
+            border-bottom-color: var(--zovo-primary);
+        }
+
+        .demo-header-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 12px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .demo-header-key {
+            color: #10b981;
+        }
+
+        .demo-header-val {
+            color: var(--zovo-text-secondary);
+        }
+
+        /* Final step */
+        .shortcuts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--zovo-bg-elevated);
+            border-radius: 10px;
+        }
+
+        .shortcut-keys {
+            display: flex;
+            gap: 4px;
+        }
+
+        .key-cap {
+            background: var(--zovo-bg-primary);
+            border: 1px solid var(--zovo-border);
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-family: 'Monaco', monospace;
+            font-weight: 600;
+            color: var(--zovo-text-primary);
+        }
+
+        .shortcut-label {
+            font-size: 12px;
+            color: var(--zovo-text-secondary);
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/onboarding-VF4cULWQ.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <div class="header" id="page-header">
+            <div class="logo-container">
+                <div class="logo">Z</div>
+                <div class="brand-info">
+                    <div class="brand-name">API Testing PRO</div>
+                    <div class="brand-tagline">Professional API Testing</div>
+                </div>
+            </div>
+            <h1>Welcome</h1>
+            <p class="subtitle">The fastest way to test REST APIs directly in your browser. No signup required.</p>
+        </div>
+
+        <div class="container" id="main-content">
+            <!-- Quick Start -->
+            <div class="card">
+                <h2 class="card-title">Try it now - click any sample API</h2>
+                <div class="samples" aria-label="Sample API endpoints">
+                    <div class="sample" role="button" tabindex="0" aria-label="Copy GET URL for jsonplaceholder posts"
+                        data-action="copy-url" data-url="https://jsonplaceholder.typicode.com/posts/1">
+                        <span class="method get">GET</span>
+                        <span class="sample-url">jsonplaceholder.typicode.com/posts/1</span>
+                        <span class="sample-action">Copy URL</span>
+                    </div>
+                    <div class="sample" role="button" tabindex="0" aria-label="Copy GET URL for GitHub users"
+                        data-action="copy-url" data-url="https://api.github.com/users/octocat">
+                        <span class="method get">GET</span>
+                        <span class="sample-url">api.github.com/users/octocat</span>
+                        <span class="sample-action">Copy URL</span>
+                    </div>
+                    <div class="sample" role="button" tabindex="0" aria-label="Copy POST URL for httpbin"
+                        data-action="copy-url" data-url="https://httpbin.org/post">
+                        <span class="method post">POST</span>
+                        <span class="sample-url">httpbin.org/post</span>
+                        <span class="sample-action">Copy URL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pin Instructions -->
+            <div class="card">
+                <h2 class="card-title">Pin for Quick Access</h2>
+                <div class="pin-steps">
+                    <div class="pin-step">
+                        <span class="step-num">1</span>
+                        <div class="step-content">
+                            <h3>Click the puzzle icon in Chrome toolbar</h3>
+                            <p>Find the Extensions menu at the top right of Chrome</p>
+                        </div>
+                    </div>
+                    <div class="pin-step">
+                        <span class="step-num">2</span>
+                        <div class="step-content">
+                            <h3>Find API Testing PRO</h3>
+                            <p>Scroll through your extensions list</p>
+                        </div>
+                    </div>
+                    <div class="pin-step">
+                        <span class="step-num">3</span>
+                        <div class="step-content">
+                            <h3>Click the pin icon</h3>
+                            <p>The extension will appear in your toolbar for quick access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="card">
+                <h2 class="card-title">What you can do</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>All HTTP Methods</h3>
+                        <p>GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Request History</h3>
+                        <p>Your requests are saved locally</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Auth Support</h3>
+                        <p>Bearer, Basic, API Keys</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Collections <span class="pro-badge">PRO</span></h3>
+                        <p>Organize requests into folders</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <button class="cta-primary" data-action="start-testing">
+                    Start Testing APIs
+                    <span>→</span>
+                </button>
+                <p class="cta-hint">You will see a quick walkthrough of how to use the extension</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer" id="page-footer">
+            <div class="footer-brand">API Testing PRO</div>
+            <div class="footer-links">
+                <a href="mailto:support@zovo.one">Support</a>
+                <a href="https://www.zovo.one/privacy" target="_blank">Privacy</a>
+            </div>
+            <div class="footer-copy">Professional API testing in your browser</div>
+        </div>
+    </div>
+
+<script src="../../zovo150k.js"></script>
+</body>
+
+</html>

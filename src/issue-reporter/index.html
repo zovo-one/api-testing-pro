@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue - API Testing PRO</title>
+    <style>
+        :root {
+            --zovo-primary: #7c3aed;
+            --zovo-primary-hover: #6d28d9;
+            --zovo-bg-primary: #0f0f0f;
+            --zovo-bg-secondary: #18181b;
+            --zovo-bg-elevated: #27272a;
+            --zovo-bg-tertiary: #3f3f46;
+            --zovo-text-primary: #fafafa;
+            --zovo-text-secondary: #a1a1aa;
+            --zovo-text-muted: #71717a;
+            --zovo-success: #10b981;
+            --zovo-warning: #f59e0b;
+            --zovo-error: #ef4444;
+            --zovo-border: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--zovo-bg-primary);
+            color: var(--zovo-text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            background: var(--zovo-bg-secondary);
+            border-bottom: 1px solid var(--zovo-border);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--zovo-primary), var(--zovo-primary-hover));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo span {
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .header-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--zovo-text-muted);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .close-btn:hover {
+            background: var(--zovo-bg-elevated);
+            color: var(--zovo-text-primary);
+        }
+
+        /* Progress Steps */
+        .progress {
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--zovo-text-muted);
+            font-size: 13px;
+        }
+
+        .step.active {
+            color: var(--zovo-primary);
+        }
+
+        .step.completed {
+            color: var(--zovo-success);
+        }
+
+        .step-number {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid currentColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .step.active .step-number {
+            background: var(--zovo-primary);
+            border-color: var(--zovo-primary);
+            color: white;
+        }
+
+        .step.completed .step-number {
+            background: var(--zovo-success);
+            border-color: var(--zovo-success);
+            color: white;
+        }
+
+        .step-line {
+            width: 32px;
+            height: 2px;
+            background: var(--zovo-border);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 0 24px 40px;
+            flex: 1;
+        }
+
+        .card {
+            background: var(--zovo-bg-secondary);
+            border: 1px solid var(--zovo-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            color: var(--zovo-text-muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Issue Options */
+        .issue-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .issue-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px;
+            background: var(--zovo-bg-elevated);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .issue-option:hover {
+            border-color: var(--zovo-primary);
+        }
+
+        .issue-option.selected {
+            border-color: var(--zovo-primary);
+            background: rgba(124, 58, 237, 0.1);
+        }
+
+        .issue-radio {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--zovo-text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .issue-option.selected .issue-radio {
+            border-color: var(--zovo-primary);
+        }
+
+        .issue-option.selected .issue-radio::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--zovo-primary);
+            border-radius: 50%;
+        }
+
+        .issue-content h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .issue-content p {
+            color: var(--zovo-text-muted);
+            font-size: 13px;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 14px;
+            background: var(--zovo-bg-elevated);
+            border: 1px solid var(--zovo-border);
+            border-radius: 10px;
+            color: var(--zovo-text-primary);
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--zovo-primary);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-hint {
+            color: var(--zovo-text-muted);
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        /* Buttons */
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            padding-top: 12px;
+            border-top: 1px solid var(--zovo-border);
+            margin-top: 24px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-secondary {
+            background: var(--zovo-bg-elevated);
+            color: var(--zovo-text-secondary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--zovo-bg-tertiary);
+            color: var(--zovo-text-primary);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--zovo-primary), var(--zovo-primary-hover));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Alternative Support */
+        .alt-support {
+            text-align: center;
+            padding: 20px;
+            background: var(--zovo-bg-secondary);
+            border-radius: 12px;
+            margin-top: 24px;
+        }
+
+        .alt-support p {
+            color: var(--zovo-text-muted);
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .alt-support a {
+            color: var(--zovo-primary);
+            text-decoration: none;
+        }
+
+        .alt-support a:hover {
+            text-decoration: underline;
+        }
+
+        /* Success State */
+        .success-state {
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        .success-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--zovo-success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+        }
+
+        .success-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .success-message {
+            color: var(--zovo-text-muted);
+            font-size: 14px;
+            max-width: 400px;
+            margin: 0 auto 24px;
+        }
+
+        /* Hidden */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/issue-reporter-keH5G7qx.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo"><span></span></div>
+            <span class="header-title">Issue Reporter</span>
+        </div>
+        <button class="close-btn" data-action="close-window" title="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Progress Steps -->
+    <div class="progress">
+        <div class="step active" id="step1">
+            <span class="step-number">1</span>
+            <span>Select Issue</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step2">
+            <span class="step-number">2</span>
+            <span>Details</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" id="step3">
+            <span class="step-number">3</span>
+            <span>Done</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Step 1: Select Issue Type -->
+        <div class="card" id="card-step1">
+            <h2 class="card-title">What type of issue are you experiencing?</h2>
+            <p class="card-description">Please select the option that best describes your issue:</p>
+
+            <div class="issue-options" role="radiogroup" aria-label="Issue type selection">
+                <div class="issue-option" role="radio" tabindex="0" aria-checked="false"
+                    aria-label="Requests are failing" data-action="select-issue" data-issue="request-failed">
+                    <div class="issue-radio"></div>
+                    <div class="issue-content">
+                        <h3>Requests are failing</h3>
+                        <p>API requests return errors or don't complete as expected.</p>
+                    </div>
+                </div>
+
+                <div class="issue-option" role="radio" tabindex="0" aria-checked="false"
+                    aria-label="The interface is broken" data-action="select-issue" data-issue="ui-broken">
+                    <div class="issue-radio"></div>
+                    <div class="issue-content">
+                        <h3>The interface is broken</h3>
+                        <p>The popup or side panel doesn't display correctly or is missing elements.</p>
+                    </div>
+                </div>
+
+                <div class="issue-option" role="radio" tabindex="0" aria-checked="false" aria-label="Feature request"
+                    data-action="select-issue" data-issue="feature-request">
+                    <div class="issue-radio"></div>
+                    <div class="issue-content">
+                        <h3>Feature request</h3>
+                        <p>I have a suggestion for improving API Testing PRO.</p>
+                    </div>
+                </div>
+
+                <div class="issue-option" role="radio" tabindex="0" aria-checked="false" aria-label="Pro license issue"
+                    data-action="select-issue" data-issue="pro-license">
+                    <div class="issue-radio"></div>
+                    <div class="issue-content">
+                        <h3>Pro license issue</h3>
+                        <p>I'm having trouble activating my Pro license or accessing Pro features.</p>
+                    </div>
+                </div>
+
+                <div class="issue-option" role="radio" tabindex="0" aria-checked="false" aria-label="Other issue"
+                    data-action="select-issue" data-issue="other">
+                    <div class="issue-radio"></div>
+                    <div class="issue-content">
+                        <h3>Other</h3>
+                        <p>My issue doesn't fit any of the above categories.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn btn-secondary" data-action="close-window">Cancel</button>
+                <button class="btn btn-primary" id="continue-btn" disabled data-action="go-step2">Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Issue Details -->
+        <div class="card hidden" id="card-step2">
+            <h2 class="card-title">Tell us more</h2>
+            <p class="card-description">Please provide details to help us understand your issue:</p>
+
+            <div class="form-group">
+                <label class="form-label">Describe the issue</label>
+                <textarea class="form-textarea" id="issue-description"
+                    placeholder="What happened? What did you expect to happen?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email (optional)</label>
+                <input type="email" class="form-input" id="issue-email" placeholder="your@email.com">
+                <p class="form-hint">We'll only contact you if we need more information.</p>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn btn-secondary" data-action="go-step1">Back</button>
+                <button class="btn btn-primary" data-action="submit-issue">Submit Report</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Success -->
+        <div class="card hidden" id="card-step3">
+            <div class="success-state">
+                <div class="success-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <h2 class="success-title">Thank you</h2>
+                <p class="success-message">Your issue has been reported. We'll look into it and get back to you if
+                    needed.</p>
+                <button class="btn btn-primary" data-action="close-window">Close</button>
+            </div>
+        </div>
+
+        <!-- Alternative Support -->
+        <div class="alt-support">
+            <p>For urgent issues or other inquiries:</p>
+            <a href="mailto:support@zovo.one">support@zovo.one</a> ·
+            <a href="https://www.zovo.one/support" target="_blank">Help Center</a> ·
+            <a href="https://discord.gg/zovo" target="_blank">Discord Community</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

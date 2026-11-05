@@ -1,0 +1,194 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "REST-API-Client und HTTP-Tester. GET, POST, PUT, DELETE senden. JSON-Viewer, Auth, Header. Postman-Alternative.",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo"
+  },
+  "buttonSend": {
+    "message": "Senden"
+  },
+  "buttonSave": {
+    "message": "Speichern"
+  },
+  "buttonCancel": {
+    "message": "Abbrechen"
+  },
+  "buttonDelete": {
+    "message": "Löschen"
+  },
+  "buttonCopy": {
+    "message": "Kopieren"
+  },
+  "buttonClear": {
+    "message": "Leeren"
+  },
+  "buttonImport": {
+    "message": "Importieren"
+  },
+  "buttonExport": {
+    "message": "Exportieren"
+  },
+  "buttonUpgrade": {
+    "message": "Auf Pro upgraden"
+  },
+  "buttonTryAgain": {
+    "message": "Erneut versuchen"
+  },
+  "tabHeaders": {
+    "message": "Header"
+  },
+  "tabBody": {
+    "message": "Body"
+  },
+  "tabParams": {
+    "message": "Parameter"
+  },
+  "tabAuth": {
+    "message": "Auth"
+  },
+  "tabResponse": {
+    "message": "Antwort"
+  },
+  "tabHistory": {
+    "message": "Verlauf"
+  },
+  "tabSaved": {
+    "message": "Gespeichert"
+  },
+  "tabSettings": {
+    "message": "Einstellungen"
+  },
+  "labelUrl": {
+    "message": "URL"
+  },
+  "labelMethod": {
+    "message": "Methode"
+  },
+  "labelStatus": {
+    "message": "Status"
+  },
+  "labelTime": {
+    "message": "Zeit"
+  },
+  "labelSize": {
+    "message": "Größe"
+  },
+  "labelContentType": {
+    "message": "Content-Type"
+  },
+  "placeholderUrl": {
+    "message": "Anfrage-URL eingeben"
+  },
+  "placeholderSearch": {
+    "message": "Anfragen suchen..."
+  },
+  "placeholderHeaderKey": {
+    "message": "Header-Name"
+  },
+  "placeholderHeaderValue": {
+    "message": "Wert"
+  },
+  "statusSending": {
+    "message": "Anfrage wird gesendet..."
+  },
+  "statusSuccess": {
+    "message": "Anfrage erfolgreich"
+  },
+  "statusError": {
+    "message": "Anfrage fehlgeschlagen"
+  },
+  "errorNetwork": {
+    "message": "Netzwerkfehler — überprüfen Sie Ihre Verbindung"
+  },
+  "errorTimeout": {
+    "message": "Zeitüberschreitung der Anfrage"
+  },
+  "errorInvalidUrl": {
+    "message": "Bitte geben Sie eine gültige URL ein"
+  },
+  "errorSomethingWrong": {
+    "message": "Etwas ist schiefgelaufen"
+  },
+  "emptyHistory": {
+    "message": "Noch kein Anfrageverlauf"
+  },
+  "emptySaved": {
+    "message": "Keine gespeicherten Anfragen"
+  },
+  "proFeatureLocked": {
+    "message": "Diese Funktion erfordert Pro"
+  },
+  "proSavedLimit": {
+    "message": "Kostenloses Limit erreicht ($COUNT$/5). Upgraden Sie auf Pro für unbegrenzte Anfragen.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "proPrice": {
+    "message": "4,99 $/Monat oder 39,99 $/Jahr"
+  },
+  "settingsTheme": {
+    "message": "Design"
+  },
+  "settingsThemeDark": {
+    "message": "Dunkel"
+  },
+  "settingsThemeLight": {
+    "message": "Hell"
+  },
+  "settingsTimeout": {
+    "message": "Zeitüberschreitung"
+  },
+  "settingsFollowRedirects": {
+    "message": "Weiterleitungen folgen"
+  },
+  "contextMenuOpen": {
+    "message": "API Testing PRO öffnen"
+  },
+  "onboardingWelcome": {
+    "message": "Willkommen bei API Testing PRO"
+  },
+  "onboardingSubtitle": {
+    "message": "Professionelle API-Tests, direkt in Ihrem Browser"
+  },
+  "onboardingGetStarted": {
+    "message": "Loslegen"
+  },
+  "responseTime": {
+    "message": "$TIME$ ms",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "responseSize": {
+    "message": "$SIZE$ KB",
+    "placeholders": {
+      "size": {
+        "content": "$1"
+      }
+    }
+  },
+  "referralTitle": {
+    "message": "Freunde einladen, Pro kostenlos erhalten"
+  },
+  "referralSubtitle": {
+    "message": "Verdienen Sie 7 Tage Pro für jeden Freund, der beitritt"
+  },
+  "referralCopyLink": {
+    "message": "Empfehlungslink kopieren"
+  },
+  "referralCopied": {
+    "message": "Link kopiert!"
+  }
+}

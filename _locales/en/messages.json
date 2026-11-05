@@ -1,0 +1,252 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "REST API client and HTTP tester. Send GET, POST, PUT, DELETE. JSON viewer, auth, headers. Postman alternative.",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo",
+    "description": "Tooltip for the extension toolbar icon"
+  },
+  "buttonSend": {
+    "message": "Send",
+    "description": "Send request button"
+  },
+  "buttonSave": {
+    "message": "Save",
+    "description": "Save request button"
+  },
+  "buttonCancel": {
+    "message": "Cancel",
+    "description": "Cancel action button"
+  },
+  "buttonDelete": {
+    "message": "Delete",
+    "description": "Delete item button"
+  },
+  "buttonCopy": {
+    "message": "Copy",
+    "description": "Copy to clipboard button"
+  },
+  "buttonClear": {
+    "message": "Clear",
+    "description": "Clear all items button"
+  },
+  "buttonImport": {
+    "message": "Import",
+    "description": "Import data button"
+  },
+  "buttonExport": {
+    "message": "Export",
+    "description": "Export data button"
+  },
+  "buttonUpgrade": {
+    "message": "Upgrade to Pro",
+    "description": "Upgrade to Pro subscription button"
+  },
+  "buttonTryAgain": {
+    "message": "Try Again",
+    "description": "Retry action button"
+  },
+  "tabHeaders": {
+    "message": "Headers",
+    "description": "Headers tab label"
+  },
+  "tabBody": {
+    "message": "Body",
+    "description": "Request body tab label"
+  },
+  "tabParams": {
+    "message": "Params",
+    "description": "Query parameters tab label"
+  },
+  "tabAuth": {
+    "message": "Auth",
+    "description": "Authentication tab label"
+  },
+  "tabResponse": {
+    "message": "Response",
+    "description": "Response viewer tab label"
+  },
+  "tabHistory": {
+    "message": "History",
+    "description": "Request history tab label"
+  },
+  "tabSaved": {
+    "message": "Saved",
+    "description": "Saved requests tab label"
+  },
+  "tabSettings": {
+    "message": "Settings",
+    "description": "Settings tab label"
+  },
+  "labelUrl": {
+    "message": "URL",
+    "description": "URL input label"
+  },
+  "labelMethod": {
+    "message": "Method",
+    "description": "HTTP method selector label"
+  },
+  "labelStatus": {
+    "message": "Status",
+    "description": "Response status label"
+  },
+  "labelTime": {
+    "message": "Time",
+    "description": "Response time label"
+  },
+  "labelSize": {
+    "message": "Size",
+    "description": "Response size label"
+  },
+  "labelContentType": {
+    "message": "Content-Type",
+    "description": "Content type header label"
+  },
+  "placeholderUrl": {
+    "message": "Enter request URL",
+    "description": "URL input placeholder text"
+  },
+  "placeholderSearch": {
+    "message": "Search requests...",
+    "description": "Search input placeholder"
+  },
+  "placeholderHeaderKey": {
+    "message": "Header name",
+    "description": "Header key input placeholder"
+  },
+  "placeholderHeaderValue": {
+    "message": "Value",
+    "description": "Header value input placeholder"
+  },
+  "statusSending": {
+    "message": "Sending request...",
+    "description": "Status while request is in progress"
+  },
+  "statusSuccess": {
+    "message": "Request successful",
+    "description": "Status when request succeeds"
+  },
+  "statusError": {
+    "message": "Request failed",
+    "description": "Status when request fails"
+  },
+  "errorNetwork": {
+    "message": "Network error — check your connection",
+    "description": "Error message for network failures"
+  },
+  "errorTimeout": {
+    "message": "Request timed out",
+    "description": "Error message for request timeout"
+  },
+  "errorInvalidUrl": {
+    "message": "Please enter a valid URL",
+    "description": "Error for invalid URL input"
+  },
+  "errorSomethingWrong": {
+    "message": "Something went wrong",
+    "description": "Generic error message"
+  },
+  "emptyHistory": {
+    "message": "No request history yet",
+    "description": "Empty state for history panel"
+  },
+  "emptySaved": {
+    "message": "No saved requests",
+    "description": "Empty state for saved requests"
+  },
+  "proFeatureLocked": {
+    "message": "This feature requires Pro",
+    "description": "Message when free user tries Pro feature"
+  },
+  "proSavedLimit": {
+    "message": "Free tier limit reached ($COUNT$/5). Upgrade to Pro for unlimited saved requests.",
+    "description": "Message when save limit is reached",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "proPrice": {
+    "message": "$4.99/month or $39.99/year",
+    "description": "Pro subscription pricing text"
+  },
+  "settingsTheme": {
+    "message": "Theme",
+    "description": "Theme setting label"
+  },
+  "settingsThemeDark": {
+    "message": "Dark",
+    "description": "Dark theme option"
+  },
+  "settingsThemeLight": {
+    "message": "Light",
+    "description": "Light theme option"
+  },
+  "settingsTimeout": {
+    "message": "Request Timeout",
+    "description": "Timeout setting label"
+  },
+  "settingsFollowRedirects": {
+    "message": "Follow Redirects",
+    "description": "Follow redirects toggle label"
+  },
+  "contextMenuOpen": {
+    "message": "Open API Testing PRO",
+    "description": "Context menu item to open the extension"
+  },
+  "onboardingWelcome": {
+    "message": "Welcome to API Testing PRO",
+    "description": "Onboarding welcome title"
+  },
+  "onboardingSubtitle": {
+    "message": "Professional API testing, right in your browser",
+    "description": "Onboarding welcome subtitle"
+  },
+  "onboardingGetStarted": {
+    "message": "Get Started",
+    "description": "Onboarding get started button"
+  },
+  "responseTime": {
+    "message": "$TIME$ ms",
+    "description": "Response time display",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "245"
+      }
+    }
+  },
+  "responseSize": {
+    "message": "$SIZE$ KB",
+    "description": "Response size display",
+    "placeholders": {
+      "size": {
+        "content": "$1",
+        "example": "12.5"
+      }
+    }
+  },
+  "referralTitle": {
+    "message": "Invite Friends, Get Pro Free",
+    "description": "Referral section title"
+  },
+  "referralSubtitle": {
+    "message": "Earn 7 days of Pro for every friend who joins",
+    "description": "Referral section subtitle"
+  },
+  "referralCopyLink": {
+    "message": "Copy Referral Link",
+    "description": "Copy referral link button"
+  },
+  "referralCopied": {
+    "message": "Link copied!",
+    "description": "Confirmation after copying referral link"
+  }
+}

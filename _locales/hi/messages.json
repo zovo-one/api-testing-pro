@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "REST API क्लाइंट और HTTP टेस्टर। GET, POST, PUT, DELETE भेजें। JSON व्यूअर, auth, headers। Postman विकल्प।",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo",
+    "description": "Tooltip for the extension toolbar icon"
+  }
+}

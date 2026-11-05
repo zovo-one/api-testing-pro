@@ -1,0 +1,194 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Tests d'API professionnels dans le panneau latéral du navigateur. Testez les APIs REST, GraphQL et WebSocket.",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo"
+  },
+  "buttonSend": {
+    "message": "Envoyer"
+  },
+  "buttonSave": {
+    "message": "Enregistrer"
+  },
+  "buttonCancel": {
+    "message": "Annuler"
+  },
+  "buttonDelete": {
+    "message": "Supprimer"
+  },
+  "buttonCopy": {
+    "message": "Copier"
+  },
+  "buttonClear": {
+    "message": "Effacer"
+  },
+  "buttonImport": {
+    "message": "Importer"
+  },
+  "buttonExport": {
+    "message": "Exporter"
+  },
+  "buttonUpgrade": {
+    "message": "Passer à Pro"
+  },
+  "buttonTryAgain": {
+    "message": "Réessayer"
+  },
+  "tabHeaders": {
+    "message": "En-têtes"
+  },
+  "tabBody": {
+    "message": "Corps"
+  },
+  "tabParams": {
+    "message": "Paramètres"
+  },
+  "tabAuth": {
+    "message": "Auth"
+  },
+  "tabResponse": {
+    "message": "Réponse"
+  },
+  "tabHistory": {
+    "message": "Historique"
+  },
+  "tabSaved": {
+    "message": "Enregistrés"
+  },
+  "tabSettings": {
+    "message": "Paramètres"
+  },
+  "labelUrl": {
+    "message": "URL"
+  },
+  "labelMethod": {
+    "message": "Méthode"
+  },
+  "labelStatus": {
+    "message": "Statut"
+  },
+  "labelTime": {
+    "message": "Temps"
+  },
+  "labelSize": {
+    "message": "Taille"
+  },
+  "labelContentType": {
+    "message": "Content-Type"
+  },
+  "placeholderUrl": {
+    "message": "Entrez l'URL de la requête"
+  },
+  "placeholderSearch": {
+    "message": "Rechercher des requêtes..."
+  },
+  "placeholderHeaderKey": {
+    "message": "Nom de l'en-tête"
+  },
+  "placeholderHeaderValue": {
+    "message": "Valeur"
+  },
+  "statusSending": {
+    "message": "Envoi de la requête..."
+  },
+  "statusSuccess": {
+    "message": "Requête réussie"
+  },
+  "statusError": {
+    "message": "Échec de la requête"
+  },
+  "errorNetwork": {
+    "message": "Erreur réseau — vérifiez votre connexion"
+  },
+  "errorTimeout": {
+    "message": "Délai d'attente dépassé"
+  },
+  "errorInvalidUrl": {
+    "message": "Veuillez entrer une URL valide"
+  },
+  "errorSomethingWrong": {
+    "message": "Une erreur est survenue"
+  },
+  "emptyHistory": {
+    "message": "Aucun historique de requêtes"
+  },
+  "emptySaved": {
+    "message": "Aucune requête enregistrée"
+  },
+  "proFeatureLocked": {
+    "message": "Cette fonctionnalité nécessite Pro"
+  },
+  "proSavedLimit": {
+    "message": "Limite gratuite atteinte ($COUNT$/5). Passez à Pro pour des requêtes illimitées.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "proPrice": {
+    "message": "4,99 $/mois ou 39,99 $/an"
+  },
+  "settingsTheme": {
+    "message": "Thème"
+  },
+  "settingsThemeDark": {
+    "message": "Sombre"
+  },
+  "settingsThemeLight": {
+    "message": "Clair"
+  },
+  "settingsTimeout": {
+    "message": "Délai d'attente"
+  },
+  "settingsFollowRedirects": {
+    "message": "Suivre les redirections"
+  },
+  "contextMenuOpen": {
+    "message": "Ouvrir API Testing PRO"
+  },
+  "onboardingWelcome": {
+    "message": "Bienvenue sur API Testing PRO"
+  },
+  "onboardingSubtitle": {
+    "message": "Tests d'API professionnels, directement dans votre navigateur"
+  },
+  "onboardingGetStarted": {
+    "message": "Commencer"
+  },
+  "responseTime": {
+    "message": "$TIME$ ms",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "responseSize": {
+    "message": "$SIZE$ Ko",
+    "placeholders": {
+      "size": {
+        "content": "$1"
+      }
+    }
+  },
+  "referralTitle": {
+    "message": "Invitez des amis, obtenez Pro gratuitement"
+  },
+  "referralSubtitle": {
+    "message": "Gagnez 7 jours de Pro pour chaque ami qui rejoint"
+  },
+  "referralCopyLink": {
+    "message": "Copier le lien de parrainage"
+  },
+  "referralCopied": {
+    "message": "Lien copié !"
+  }
+}

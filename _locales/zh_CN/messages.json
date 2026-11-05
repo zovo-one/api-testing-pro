@@ -1,0 +1,194 @@
+{
+  "extensionName": {
+    "message": "API Testing PRO by Zovo - REST and HTTP Client",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "在浏览器侧边栏中进行专业的API测试。测试REST、GraphQL和WebSocket API。无需注册。",
+    "description": "The description shown in the Chrome Web Store"
+  },
+  "browserActionTitle": {
+    "message": "API Testing PRO by Zovo"
+  },
+  "buttonSend": {
+    "message": "发送"
+  },
+  "buttonSave": {
+    "message": "保存"
+  },
+  "buttonCancel": {
+    "message": "取消"
+  },
+  "buttonDelete": {
+    "message": "删除"
+  },
+  "buttonCopy": {
+    "message": "复制"
+  },
+  "buttonClear": {
+    "message": "清除"
+  },
+  "buttonImport": {
+    "message": "导入"
+  },
+  "buttonExport": {
+    "message": "导出"
+  },
+  "buttonUpgrade": {
+    "message": "升级到Pro"
+  },
+  "buttonTryAgain": {
+    "message": "重试"
+  },
+  "tabHeaders": {
+    "message": "请求头"
+  },
+  "tabBody": {
+    "message": "请求体"
+  },
+  "tabParams": {
+    "message": "参数"
+  },
+  "tabAuth": {
+    "message": "认证"
+  },
+  "tabResponse": {
+    "message": "响应"
+  },
+  "tabHistory": {
+    "message": "历史"
+  },
+  "tabSaved": {
+    "message": "已保存"
+  },
+  "tabSettings": {
+    "message": "设置"
+  },
+  "labelUrl": {
+    "message": "URL"
+  },
+  "labelMethod": {
+    "message": "方法"
+  },
+  "labelStatus": {
+    "message": "状态"
+  },
+  "labelTime": {
+    "message": "时间"
+  },
+  "labelSize": {
+    "message": "大小"
+  },
+  "labelContentType": {
+    "message": "Content-Type"
+  },
+  "placeholderUrl": {
+    "message": "输入请求URL"
+  },
+  "placeholderSearch": {
+    "message": "搜索请求..."
+  },
+  "placeholderHeaderKey": {
+    "message": "请求头名称"
+  },
+  "placeholderHeaderValue": {
+    "message": "值"
+  },
+  "statusSending": {
+    "message": "正在发送请求..."
+  },
+  "statusSuccess": {
+    "message": "请求成功"
+  },
+  "statusError": {
+    "message": "请求失败"
+  },
+  "errorNetwork": {
+    "message": "网络错误 — 请检查您的连接"
+  },
+  "errorTimeout": {
+    "message": "请求超时"
+  },
+  "errorInvalidUrl": {
+    "message": "请输入有效的URL"
+  },
+  "errorSomethingWrong": {
+    "message": "出了点问题"
+  },
+  "emptyHistory": {
+    "message": "暂无请求历史"
+  },
+  "emptySaved": {
+    "message": "暂无保存的请求"
+  },
+  "proFeatureLocked": {
+    "message": "此功能需要Pro版"
+  },
+  "proSavedLimit": {
+    "message": "免费版本已达上限（$COUNT$/5）。升级到Pro获取无限请求。",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "proPrice": {
+    "message": "$4.99/月 或 $39.99/年"
+  },
+  "settingsTheme": {
+    "message": "主题"
+  },
+  "settingsThemeDark": {
+    "message": "暗色"
+  },
+  "settingsThemeLight": {
+    "message": "亮色"
+  },
+  "settingsTimeout": {
+    "message": "超时时间"
+  },
+  "settingsFollowRedirects": {
+    "message": "跟随重定向"
+  },
+  "contextMenuOpen": {
+    "message": "打开 API Testing PRO"
+  },
+  "onboardingWelcome": {
+    "message": "欢迎使用 API Testing PRO"
+  },
+  "onboardingSubtitle": {
+    "message": "直接在浏览器中进行专业的API测试"
+  },
+  "onboardingGetStarted": {
+    "message": "开始使用"
+  },
+  "responseTime": {
+    "message": "$TIME$ 毫秒",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "responseSize": {
+    "message": "$SIZE$ KB",
+    "placeholders": {
+      "size": {
+        "content": "$1"
+      }
+    }
+  },
+  "referralTitle": {
+    "message": "邀请朋友，免费获得Pro"
+  },
+  "referralSubtitle": {
+    "message": "每邀请一位朋友加入，获得7天Pro"
+  },
+  "referralCopyLink": {
+    "message": "复制推荐链接"
+  },
+  "referralCopied": {
+    "message": "链接已复制！"
+  }
+}
